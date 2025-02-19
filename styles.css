@@ -1,5 +1,5 @@
 :root {
-    --primary: #cfb02c;
+    --primary: #CFB02CFF;
     --secondary: #758d87;
     --tertiary:#344742;
     --background: #293330;
@@ -40,6 +40,14 @@ body {
     padding: 0 15px;
     cursor: pointer;
     color: var(--tertiary);
+}
+
+.menu-link:hover {
+    text-decoration: underline;
+}
+
+.shopping{
+    display: flex;
 }
 
 .shopping .fa {
@@ -91,8 +99,9 @@ body {
 .product-containers {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     margin: 0 0 50px 0;
+    gap: 40px;
 }
 
 .product-container {
@@ -107,6 +116,7 @@ body {
     font-size: 28px;
     margin: 23px 0 1px;
     color: var(--black);
+    text-align: center;
 }
 
 .product-container h3 {
@@ -229,6 +239,10 @@ input[type="button"]:hover {
     cursor: pointer;
 }
 
+.link-container p:hover {
+    text-decoration: underline;
+}
+
 .social-icon {
     width: 25px;
     display: flex;
@@ -287,3 +301,47 @@ input[type="button"] {
 input[type="button"]:hover {
     background-color: var(--secondary);
 }
+
+@media only screen and (max-width: 460px){
+    .shopping {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .link-containers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-containers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+@media only screen and (max-width: 750px){
+    .link-containers {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .book{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-side-book img{
+        left: -10%;
+    }
+}
+
+@media only screen and (max-width: 1270px) {
+    .main-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
